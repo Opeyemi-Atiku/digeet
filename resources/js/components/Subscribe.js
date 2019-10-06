@@ -4,13 +4,13 @@ import ReactDOM from 'react-dom';
 class Subscribe extends Component {
     render() {
         return (
-            <div class="container">
-               <div class="row">
-                   <div class="col-lg-5 col-md-12 col-sm-12">
+            <div className="container">
+               <div className="row">
+                   <div className="col-lg-5 col-md-12 col-sm-12">
                         <h1>Lorem Ipsum</h1>
                         <p>Lorem Ipsum</p>
-                        <div class="email-box">
-                            <div class="input">
+                        <div className="email-box">
+                            <div className="input">
                                 <input type="email" placeholder="Enter your email"/>
                                 <button>Get started</button>
                             </div>
