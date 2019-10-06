@@ -16,3 +16,6 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//route for spa not needed yet
+Route::get('{any}', 'HomeController@index')->where('any','.*');
