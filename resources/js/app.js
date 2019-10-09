@@ -14,3 +14,4 @@ require('./bootstrap');
  */
 
 require('./components/Subscribe');
+require('./components/Registration');

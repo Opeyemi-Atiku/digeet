@@ -112,7 +112,7 @@
                                 <div class="d-flex justify-content-between">
                                    <div class="pd-r-15">
                                       <span class="avatar avatar-online">
-                                      <img src="dashboardAssets/assets/images/avatar/avatar1.png" class="img-fluid" alt="">
+                                      <img src="assets/images/avatar/avatar1.png" class="img-fluid" alt="">
                                       <i></i>
                                       </span>
                                    </div>
@@ -137,13 +137,13 @@
                  <li class="list-inline-item dropdown">
                     <a  href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span class="select-profile">Hi, John!</span>
-                    <img src="dashboardAssets/assets/images/avatar/avatar1.png" class="img-fluid wd-35 ht-35 rounded-circle" alt="">
+                    <img src="assets/images/avatar/avatar1.png" class="img-fluid wd-35 ht-35 rounded-circle" alt="">
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-profile shadow-2">
                        <div class="user-profile-area">
                           <div class="user-profile-heading">
                              <div class="profile-thumbnail">
-                                <img src="dashboardAssets/assets/images/avatar/avatar1.png" class="img-fluid wd-35 ht-35 rounded-circle" alt="">
+                                <img src="assets/images/avatar/avatar1.png" class="img-fluid wd-35 ht-35 rounded-circle" alt="">
                              </div>
                              <div class="profile-text">
                                 <h6>John Deo</h6>
