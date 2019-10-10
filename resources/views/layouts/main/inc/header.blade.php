@@ -13,7 +13,7 @@
                     <li><a class="nav-link" href="/">Home</a></li>
                     <li><a class="nav-link" href="/dashboard">Dashboard</a></li>
                     <li><a class="btn-default btn-default-outline btn-small nav-link" href="#">Login</a></li>
-                    <li><div id="register"></div></li>
+                    <div id="register"></div>
                  </ul>
               </div>
            </div>

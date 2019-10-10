@@ -77,8 +77,6 @@
       <script src="js/swiper.min.js"></script>
       <!-- Custom -->
       <script src="js/custom.js"></script>
-      <!-- Wow -->
-      <script src="js/wow.min.js" type="text/javascript"></script>
 
         <script>
             $(function(){

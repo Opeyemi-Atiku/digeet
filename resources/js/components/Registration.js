@@ -38,7 +38,7 @@ render() {
     if(this.state.step == 1){
         return (
             <MDBContainer>
-              <a className="btn btn-default btn-small" onClick={this.toggle} id="register" href="#">Register</a>
+              <li><a className="btn btn-default btn-small" onClick={this.toggle} id="register" href="#">Register</a></li>
               <MDBModal isOpen={this.state.modal} toggle={this.toggle}>
                 <MDBModalHeader toggle={this.toggle}>Create Account</MDBModalHeader>
                 <MDBModalBody>
