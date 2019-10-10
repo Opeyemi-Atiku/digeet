@@ -68344,8 +68344,11 @@ function (_Component) {
     key: "render",
     value: function render() {
       if (this.state.step == 1) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBContainer"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-          onClick: this.toggle
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBContainer"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          "class": "btn btn-default btn-small",
+          onClick: this.toggle,
+          id: "register",
+          href: "#"
         }, "Register"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModal"], {
           isOpen: this.state.modal,
           toggle: this.toggle
