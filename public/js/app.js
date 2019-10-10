@@ -68344,11 +68344,9 @@ function (_Component) {
     key: "render",
     value: function render() {
       if (this.state.step == 1) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBContainer"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-          href: "#",
-          className: "btn-nav-line",
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBContainer"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
           onClick: this.toggle
-        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Register")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModal"], {
+        }, "Register"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModal"], {
           isOpen: this.state.modal,
           toggle: this.toggle
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalHeader"], {
@@ -68407,13 +68405,16 @@ function (_Component) {
           className: "form-control",
           placeholder: "Repeat password",
           type: "password"
-        })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalFooter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
-          color: "secondary",
+        })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalFooter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          "class": "btn btn-default btn-small",
+          id: "register",
+          href: "#",
           onClick: this.toggle
-        }, "Close"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
-          onClick: this.nextView,
-          rounded: true,
-          color: "primary"
+        }, "Close"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          "class": "btn btn-default btn-small",
+          id: "register",
+          href: "#",
+          onClick: this.nextView
         }, "Next"))));
       } else if (this.state.step == 2) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBContainer"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -68425,12 +68426,16 @@ function (_Component) {
           toggle: this.toggle
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalHeader"], {
           toggle: this.toggle
-        }, "Form 2"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalBody"], null, "step 2"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalFooter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
-          onClick: this.previousView,
-          color: "secondary"
-        }, "Previous"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
-          onClick: this.nextView,
-          color: "primary"
+        }, "Form 2"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalBody"], null, "step 2"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalFooter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          "class": "btn btn-default btn-small",
+          id: "register",
+          href: "#",
+          onClick: this.previousView
+        }, "Previous"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          "class": "btn btn-default btn-small",
+          id: "register",
+          href: "#",
+          onClick: this.nextView
         }, "Next"))));
       } else if (this.state.step == 3) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBContainer"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -68442,13 +68447,17 @@ function (_Component) {
           toggle: this.toggle
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalHeader"], {
           toggle: this.toggle
-        }, "Form 3"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalBody"], null, "step 3"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalFooter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
-          onClick: this.previousView,
-          color: "secondary"
-        }, "Previous"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBBtn"], {
-          color: "secondary",
+        }, "Form 3"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalBody"], null, "step 3"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalFooter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          "class": "btn btn-default btn-small",
+          id: "register",
+          href: "#",
+          onClick: this.previousView
+        }, "Previous"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          "class": "btn btn-default btn-small",
+          id: "register",
+          href: "#",
           onClick: this.toggle
-        }, "Submit"))));
+        }, "Previous"))));
       }
     }
   }]);

@@ -8,7 +8,7 @@
         <div class="swiper-container hero-swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-            <div class="hero-area hero-slide" style="background-image:url(_assets/img/hero/women.jpg);">
+            <div class="hero-area hero-slide" style="background-image:url(img/hero/women.jpg);">
               <div class="overlay overlay-5"></div>
               <div class="container">
                   <div class="row full-height align-items-center text-center">
@@ -28,7 +28,7 @@
             <!--End single slide -->
 
             <div class="swiper-slide">
-            <div class="hero-area hero-slide" style="background-image:url(_assets/img/hero/women.jpg);">
+            <div class="hero-area hero-slide" style="background-image:url(img/hero/women.jpg);">
               <div class="overlay overlay-5"></div>
               <div class="container">
                   <div class="row full-height align-items-center text-center">
@@ -48,7 +48,7 @@
           <!--End single slide -->
 
           <div class="swiper-slide">
-            <div class="hero-area hero-slide" style="background-image:url(_assets/img/hero/women.jpg);">
+            <div class="hero-area hero-slide" style="background-image:url(img/hero/women.jpg);">
               <div class="overlay overlay-5"></div>
               <div class="container">
                   <div class="row full-height align-items-center text-center">
@@ -83,7 +83,7 @@
          <div class="container">
             <div class="row">
                <div class="col-md-6 col-sm-12 col-xs-12 align-self-center">
-                  <img class="img-responsive" src="_assets/img/about-us.jpg" alt="Helping hands">
+                  <img class="img-responsive" src="img/about-us.jpg" alt="Helping hands">
                </div>
                <div class="col-md-6 col-sm-12 col-xs-12 align-self-center">
                   <div class="about-box diffuse-shadow p-45px sm-p-25px bg-white">
@@ -97,7 +97,7 @@
       </section>
       <!-- ========== About End ========== -->
       <!-- Video Section Start -->
-      <section class="p-100px-tb overlay overlay-6 parallax" style="background-image:url(_assets/img/bg/video-promo.jpg)">
+      <section class="p-100px-tb overlay overlay-6 parallax" style="background-image:url(img/bg/video-promo.jpg)">
          <div class="container">
             <div class="row">
                <div class="col-sm-8 offset-sm-2 text-center promo-video">
@@ -135,9 +135,9 @@
                         <div class="col">
                               <article class="content-box diffuse-shadow bg-light p-10px">
                                  <div class="btn-relative-img text-center overlay overlay-5">
-                                    <img src="_assets/img/causes/1.jpg" alt="">
+                                    <img src="img/causes/1.jpg" alt="">
                                     <div class="lightbox-icons">
-                                       <a href="_assets/img/causes/1.jpg" class="causes-lightbox" title="Donate for victims">
+                                       <a href="img/causes/1.jpg" class="causes-lightbox" title="Donate for victims">
                                         <i class="icofont-image"></i>
                                        </a>
                                        <button class="js-modal-btn" data-video-id="QIYcFth8ty4">
@@ -178,9 +178,9 @@
                         <div class="col">
                               <article class="content-box diffuse-shadow bg-light p-10px">
                                  <div class="btn-relative-img text-center overlay overlay-5">
-                                    <img src="_assets/img/causes/1.jpg" alt="">
+                                    <img src="img/causes/1.jpg" alt="">
                                     <div class="lightbox-icons">
-                                       <a href="_assets/img/causes/1.jpg" class="causes-lightbox" title="Donate for victims">
+                                       <a href="img/causes/1.jpg" class="causes-lightbox" title="Donate for victims">
                                        <i class="icofont-image"></i>
                                        </a>
                                        <button class="js-modal-btn" data-video-id="QIYcFth8ty4">
@@ -221,9 +221,9 @@
                         <div class="col">
                           <article class="content-box diffuse-shadow bg-light p-10px">
                               <div class="btn-relative-img text-center overlay overlay-5">
-                                 <img src="_assets/img/causes/1.jpg" alt="">
+                                 <img src="img/causes/1.jpg" alt="">
                                  <div class="lightbox-icons">
-                                    <a href="_assets/img/causes/1.jpg" class="causes-lightbox" title="Donate for victims">
+                                    <a href="img/causes/1.jpg" class="causes-lightbox" title="Donate for victims">
                                     <i class="icofont-image"></i>
                                     </a>
                                     <button class="js-modal-btn" data-video-id="QIYcFth8ty4">
@@ -264,9 +264,9 @@
                         <div class="col">
                           <article class="content-box diffuse-shadow bg-light p-10px">
                               <div class="btn-relative-img text-center overlay overlay-5">
-                                 <img src="_assets/img/causes/1.jpg" alt="">
+                                 <img src="img/causes/1.jpg" alt="">
                                  <div class="lightbox-icons">
-                                    <a href="_assets/img/causes/1.jpg" class="causes-lightbox" title="Donate for victims">
+                                    <a href="img/causes/1.jpg" class="causes-lightbox" title="Donate for victims">
                                     <i class="icofont-image"></i>
                                     </a>
                                     <button class="js-modal-btn" data-video-id="QIYcFth8ty4">
@@ -385,7 +385,7 @@
                   <div class="swiper-slide">
                     <div class="row single-testimonial">
                       <div class="col-sm-12 col-md-5 col-lg-3 align-self-center">
-                          <img class="img-thumbnail" src="_assets/img/donors/1.jpg" alt="">
+                          <img class="img-thumbnail" src="img/donors/1.jpg" alt="">
                        </div>
                        <div class="col-sm-12 col-md-7 col-lg-9 align-self-center">
                           <div class="p-30px testimonial-content bg-white">
@@ -400,7 +400,7 @@
                   <div class="swiper-slide">
                     <div class="row single-testimonial">
                       <div class="col-sm-12 col-md-5 col-lg-3 align-self-center">
-                          <img class="img-thumbnail" src="_assets/img/donors/2.jpg" alt="">
+                          <img class="img-thumbnail" src="img/donors/2.jpg" alt="">
                        </div>
                        <div class="col-sm-12 col-md-7 col-lg-9 align-self-center">
                           <div class="p-30px testimonial-content bg-white">
@@ -415,7 +415,7 @@
                  <div class="swiper-slide">
                     <div class="row single-testimonial">
                       <div class="col-sm-12 col-md-5 col-lg-3 align-self-center">
-                          <img class="img-thumbnail" src="_assets/img/donors/3.jpg" alt="">
+                          <img class="img-thumbnail" src="img/donors/3.jpg" alt="">
                        </div>
                        <div class="col-sm-12 col-md-7 col-lg-9 align-self-center">
                           <div class="p-30px testimonial-content bg-white">
@@ -460,7 +460,7 @@
                    <a class="btn btn-default" href="#">Join now</a>
                 </div>
                 <div class="col-md-6 col-sm-12">
-                   <img src="_assets/img/vollentiers.jpg" alt="">
+                   <img src="img/vollentiers.jpg" alt="">
                 </div>
              </div>
           </div>
@@ -484,7 +484,7 @@
                   <div class="contact-form-box bg-light">
                      <form id="contact-form" method="post" action="http://themeatelier.net/site-templates/prottasha/php/sendmail.php">
                         <div class="message col">
-                           <p class="email-loading alert alert-warning"><img src="_assets/img/loading.gif" alt="">&nbsp;&nbsp;&nbsp;Sending...</p>
+                           <p class="email-loading alert alert-warning"><img src="img/loading.gif" alt="">&nbsp;&nbsp;&nbsp;Sending...</p>
                            <p class="email-success alert alert-success"><i class="icon icon-icon-check-alt2"></i> Your quote has successfully been sent.</p>
                            <p class="email-failed alert alert-danger"><i class="icon icon-icon-close-alt2"></i> Something went wrong!</p>
                         </div>

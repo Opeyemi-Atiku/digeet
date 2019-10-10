@@ -32,31 +32,31 @@
                     <h3>Photo Gallery</h3>
                     <ul class="photo-gallery">
                       <li>
-                        <a href="#"><img src="_assets/img/causes/1.jpg" alt=""></a>
+                        <a href="#"><img src="img/causes/1.jpg" alt=""></a>
                       </li>
                       <li>
-                        <a href="#"><img src="_assets/img/causes/1.jpg" alt=""></a>
+                        <a href="#"><img src="img/causes/1.jpg" alt=""></a>
                       </li>
                       <li>
-                        <a href="#"><img src="_assets/img/causes/1.jpg" alt=""></a>
+                        <a href="#"><img src="img/causes/1.jpg" alt=""></a>
                       </li>
                       <li>
-                        <a href="#"><img src="_assets/img/causes/1.jpg" alt=""></a>
+                        <a href="#"><img src="img/causes/1.jpg" alt=""></a>
                       </li>
                       <li>
-                        <a href="#"><img src="_assets/img/causes/1.jpg" alt=""></a>
+                        <a href="#"><img src="img/causes/1.jpg" alt=""></a>
                       </li>
                       <li>
-                        <a href="#"><img src="_assets/img/causes/1.jpg" alt=""></a>
+                        <a href="#"><img src="img/causes/1.jpg" alt=""></a>
                       </li>
                       <li>
-                        <a href="#"><img src="_assets/img/causes/1.jpg" alt=""></a>
+                        <a href="#"><img src="img/causes/1.jpg" alt=""></a>
                       </li>
                       <li>
-                        <a href="#"><img src="_assets/img/causes/1.jpg" alt=""></a>
+                        <a href="#"><img src="img/causes/1.jpg" alt=""></a>
                       </li>
                       <li>
-                        <a href="#"><img src="_assets/img/causes/1.jpg" alt=""></a>
+                        <a href="#"><img src="img/causes/1.jpg" alt=""></a>
                       </li>
                     </ul>
                   </div>

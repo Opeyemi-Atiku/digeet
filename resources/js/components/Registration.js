@@ -38,7 +38,7 @@ render() {
     if(this.state.step == 1){
         return (
             <MDBContainer>
-              <a href="#" className="btn-nav-line" onClick={this.toggle}><span>Register</span></a>
+              <span onClick={this.toggle}>Register</span>
               <MDBModal isOpen={this.state.modal} toggle={this.toggle}>
                 <MDBModalHeader toggle={this.toggle}>Create Account</MDBModalHeader>
                 <MDBModalBody>
@@ -74,8 +74,8 @@ render() {
             </div>
                 </MDBModalBody>
                 <MDBModalFooter>
-                  <MDBBtn color="secondary" onClick={this.toggle}>Close</MDBBtn>
-                  <MDBBtn onClick={this.nextView} rounded color="primary">Next</MDBBtn>
+                  <a class="btn btn-default btn-small" id="register" href="#" onClick={this.toggle}>Close</a>
+                  <a class="btn btn-default btn-small" id="register" href="#" onClick={this.nextView}>Next</a>
                 </MDBModalFooter>
               </MDBModal>
             </MDBContainer>
@@ -90,8 +90,8 @@ render() {
                   step 2
                 </MDBModalBody>
                 <MDBModalFooter>
-                  <MDBBtn onClick={this.previousView} color="secondary">Previous</MDBBtn>
-                  <MDBBtn onClick={this.nextView} color="primary">Next</MDBBtn>
+                  <a class="btn btn-default btn-small" id="register" href="#" onClick={this.previousView}>Previous</a>
+                  <a class="btn btn-default btn-small" id="register" href="#" onClick={this.nextView}>Next</a>
                 </MDBModalFooter>
               </MDBModal>
             </MDBContainer>
@@ -106,8 +106,8 @@ render() {
                   step 3
                 </MDBModalBody>
                 <MDBModalFooter>
-                  <MDBBtn onClick={this.previousView} color="secondary">Previous</MDBBtn>
-                  <MDBBtn color="secondary" onClick={this.toggle}>Submit</MDBBtn>
+                  <a class="btn btn-default btn-small" id="register" href="#" onClick={this.previousView}>Previous</a>
+                  <a class="btn btn-default btn-small" id="register" href="#" onClick={this.toggle}>Previous</a>
                 </MDBModalFooter>
               </MDBModal>
             </MDBContainer>

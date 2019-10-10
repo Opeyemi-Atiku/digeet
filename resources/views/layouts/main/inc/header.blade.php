@@ -12,6 +12,8 @@
                  <ul class="nav navbar-nav ml-auto">
                     <li><a class="nav-link" href="/">Home</a></li>
                     <li><a class="nav-link" href="/dashboard">Dashboard</a></li>
+                    <li><a class="btn-default btn-default-outline btn-small nav-link" href="#">Login</a></li>
+                    <li><a class="btn btn-default btn-small" id="register" href="#"></a></li>
                  </ul>
               </div>
            </div>
