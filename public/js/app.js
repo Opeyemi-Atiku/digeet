@@ -68345,7 +68345,7 @@ function (_Component) {
     value: function render() {
       if (this.state.step == 1) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBContainer"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-          "class": "btn btn-default btn-small",
+          className: "btn btn-default btn-small",
           onClick: this.toggle,
           id: "register",
           href: "#"
