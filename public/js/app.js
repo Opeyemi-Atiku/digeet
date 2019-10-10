@@ -68362,7 +68362,7 @@ function (_Component) {
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
           className: "input-group-text"
         }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-          className: "fa fa-user"
+          className: "icofont-ui-user"
         }), " ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
           name: "",
           className: "form-control",
@@ -68375,7 +68375,7 @@ function (_Component) {
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
           className: "input-group-text"
         }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-          className: "fa fa-envelope"
+          className: "icofont-email"
         }), " ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
           name: "",
           className: "form-control",
@@ -68388,7 +68388,7 @@ function (_Component) {
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
           className: "input-group-text"
         }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-          className: "fa fa-lock"
+          className: "icofont-lock"
         }), " ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
           className: "form-control",
           placeholder: "Create password",
@@ -68400,18 +68400,18 @@ function (_Component) {
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
           className: "input-group-text"
         }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-          className: "fa fa-lock"
+          className: "icofont-lock"
         }), " ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
           className: "form-control",
           placeholder: "Repeat password",
           type: "password"
         })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalFooter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-          "class": "btn btn-default btn-small",
+          className: "btn btn-default btn-small",
           id: "register",
           href: "#",
           onClick: this.toggle
         }, "Close"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-          "class": "btn btn-default btn-small",
+          className: "btn btn-default btn-small",
           id: "register",
           href: "#",
           onClick: this.nextView
@@ -68427,12 +68427,12 @@ function (_Component) {
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalHeader"], {
           toggle: this.toggle
         }, "Form 2"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalBody"], null, "step 2"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalFooter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-          "class": "btn btn-default btn-small",
+          className: "btn btn-default btn-small",
           id: "register",
           href: "#",
           onClick: this.previousView
         }, "Previous"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-          "class": "btn btn-default btn-small",
+          className: "btn btn-default btn-small",
           id: "register",
           href: "#",
           onClick: this.nextView
@@ -68448,12 +68448,12 @@ function (_Component) {
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalHeader"], {
           toggle: this.toggle
         }, "Form 3"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalBody"], null, "step 3"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(mdbreact__WEBPACK_IMPORTED_MODULE_1__["MDBModalFooter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-          "class": "btn btn-default btn-small",
+          className: "btn btn-default btn-small",
           id: "register",
           href: "#",
           onClick: this.previousView
         }, "Previous"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-          "class": "btn btn-default btn-small",
+          className: "btn btn-default btn-small",
           id: "register",
           href: "#",
           onClick: this.toggle

@@ -80,7 +80,13 @@
       <!-- Wow -->
       <script src="js/wow.min.js" type="text/javascript"></script>
 
+        <script>
+            $(function(){
+                $('body').removeClass('modal-open');
+            });
+        </script>
 
-   </body>
+
+    </body>
 
 </html>

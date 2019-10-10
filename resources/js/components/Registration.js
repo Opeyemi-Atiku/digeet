@@ -47,25 +47,25 @@ render() {
 	                <form>
 	                    <div className="form-group input-group">
 		                    <div className="input-group-prepend">
-		                        <span className="input-group-text"> <i className="fa fa-user"></i> </span>
+		                        <span className="input-group-text"> <i className="icofont-ui-user"></i> </span>
 		                    </div>
                             <input name="" className="form-control" placeholder="Full name" type="text" />
                         </div>
                         <div className="form-group input-group">
     	                    <div className="input-group-prepend">
-		                        <span className="input-group-text"> <i className="fa fa-envelope"></i> </span>
+		                        <span className="input-group-text"> <i className="icofont-email"></i> </span>
 		                    </div>
                             <input name="" className="form-control" placeholder="Email address" type="email" />
                         </div>
                         <div className="form-group input-group">
     	                    <div className="input-group-prepend">
-		                        <span className="input-group-text"> <i className="fa fa-lock"></i> </span>
+		                        <span className="input-group-text"> <i className="icofont-lock"></i> </span>
 		                    </div>
                             <input className="form-control" placeholder="Create password" type="password"/>
                         </div>
                         <div className="form-group input-group">
     	                    <div className="input-group-prepend">
-		                        <span className="input-group-text"> <i className="fa fa-lock"></i> </span>
+		                        <span className="input-group-text"> <i className="icofont-lock"></i> </span>
 		                    </div>
                             <input className="form-control" placeholder="Repeat password" type="password"/>
                         </div>
@@ -74,8 +74,8 @@ render() {
             </div>
                 </MDBModalBody>
                 <MDBModalFooter>
-                  <a class="btn btn-default btn-small" id="register" href="#" onClick={this.toggle}>Close</a>
-                  <a class="btn btn-default btn-small" id="register" href="#" onClick={this.nextView}>Next</a>
+                  <a className="btn btn-default btn-small" id="register" href="#" onClick={this.toggle}>Close</a>
+                  <a className="btn btn-default btn-small" id="register" href="#" onClick={this.nextView}>Next</a>
                 </MDBModalFooter>
               </MDBModal>
             </MDBContainer>
@@ -90,8 +90,8 @@ render() {
                   step 2
                 </MDBModalBody>
                 <MDBModalFooter>
-                  <a class="btn btn-default btn-small" id="register" href="#" onClick={this.previousView}>Previous</a>
-                  <a class="btn btn-default btn-small" id="register" href="#" onClick={this.nextView}>Next</a>
+                  <a className="btn btn-default btn-small" id="register" href="#" onClick={this.previousView}>Previous</a>
+                  <a className="btn btn-default btn-small" id="register" href="#" onClick={this.nextView}>Next</a>
                 </MDBModalFooter>
               </MDBModal>
             </MDBContainer>
@@ -106,8 +106,8 @@ render() {
                   step 3
                 </MDBModalBody>
                 <MDBModalFooter>
-                  <a class="btn btn-default btn-small" id="register" href="#" onClick={this.previousView}>Previous</a>
-                  <a class="btn btn-default btn-small" id="register" href="#" onClick={this.toggle}>Previous</a>
+                  <a className="btn btn-default btn-small" id="register" href="#" onClick={this.previousView}>Previous</a>
+                  <a className="btn btn-default btn-small" id="register" href="#" onClick={this.toggle}>Previous</a>
                 </MDBModalFooter>
               </MDBModal>
             </MDBContainer>
