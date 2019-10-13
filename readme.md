@@ -2,7 +2,7 @@
 
 - Pull the repository
 ```bash
-git clone https://github.com/Cregital/cregital-laravel-starter.git
+git clone https://github.com/AutoRichard/Digeets.git
 ```
 - Run migration
 ```bash
