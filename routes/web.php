@@ -14,5 +14,8 @@
 Route::get('/', 'HomeController@index')->name('home');
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+Route::get('/email', function(){
+	return view('emails.verify_email');
+});
 
 Auth::routes();
