@@ -68,6 +68,7 @@ class RegisterController extends Controller
             'email' => $request->get('email'),
             'gender' => $request->get('gender'),
             'password' => bcrypt($request->get('password')),
+            'plan' => 'FREE',
             'auth_token' => $hashString,
             'auth_token_at' => $currentTime,
         ]);
