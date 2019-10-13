@@ -8,6 +8,8 @@ git clone https://github.com/Cregital/cregital-laravel-starter.git
 ```bash
 composer intall
 php artisan key:generate
+
 php artisan jwt:secret
+
 php artisan migrate
 ```
