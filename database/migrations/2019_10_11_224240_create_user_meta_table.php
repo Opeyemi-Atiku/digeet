@@ -27,6 +27,8 @@ class CreateUserMetaTable extends Migration
             $table->string('bank_name')->nullable();
             $table->string('account_name')->nullable();
             $table->string('account_number')->nullable();
+            $table->string('bvn')->nullable();
+            $table->boolean('bvn_verified')->default(false);
             $table->timestamps();
 
         });

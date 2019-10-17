@@ -20,11 +20,14 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('auth_token')->nullable();
             $table->timestamp('auth_token_at')->nullable();
-            $table->boolean('verified')->default(false);
+            $table->boolean('email_verified')->default(false);
             $table->char('gender');
             $table->string('plan')->nullable();
             $table->integer('wallet')->nullable();
-            $table->integer('referral_earning')->nullable();
+            $table->integer('referred_by')->nullable();
+            $table->string('referral_code')->nullable();
+            $table->string('referral_auth')->nullable();
+            $table->string('referral_status')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

@@ -24,7 +24,7 @@ class RegisterController extends Controller
      *
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
-     */
+     */ 
     protected function validator(array $data)
     {
             return Validator::make($data, [
@@ -39,7 +39,7 @@ class RegisterController extends Controller
                 'bank_name' => ['string'],
                 'account_name' => ['string'],
                 'account_number' => ['string'],
-            ]);
+            ]); 
     }
 
     
@@ -56,12 +56,17 @@ class RegisterController extends Controller
         if($validator->fails()){
             return response()->json(['status' => 'error', 'message' => 'Validation failed', 'validation_error' => $validator->errors()], 200);
         }
+        //Check if the user about to register was referred 
+        if($request->get('referral_token') != null){
 
-        $currentTime = Carbon::now();
+            $referral = User::where('referral_auth', $request->get('referral_token'))->first();
+            $referred_by = ($referral) ? $referral->id : null;
+
+        }
 
         // Generate unique code for the user and store the hash
         $passcode = mt_rand(10000, 99999);
-        $hashString = Hash::make($passcode);
+        $authString = $passcode.$request->get('email');
 
         $createUser = User::create([
             'name' => $request->get('name'),
@@ -69,18 +74,12 @@ class RegisterController extends Controller
             'gender' => $request->get('gender'),
             'password' => bcrypt($request->get('password')),
             'plan' => 'FREE',
-            'auth_token' => $hashString,
-            'auth_token_at' => $currentTime,
+            'referral_code' => $passcode,
+            'referral_auth' => Hash::make($authString),
+            'referred_by' => ($request->get('referral_token') == null || (isset($referred_by) && $referred_by == null)) ? NULL : $referred_by
         ]);
 
         if($createUser){
-
-            $mailData = [
-                    'email' => $request->get('email'),
-                    'subject' => "Digeets Email Verification",
-                    'magicLink' => getenv('APP_URL').'/magicLink?token='.encrypt($hashString),
-                    'name' => $request->get('name')
-            ];
 
             UserMeta::create([
                 'user_id' => $createUser->id,
@@ -94,11 +93,11 @@ class RegisterController extends Controller
 
             ]);
 
-            // Send mail
-            Mail::to($mailData['email'])
-                ->queue(new EmailVerification($mailData));
+            $token = auth()->login($createUser);
+            auth()->setTTL(52560000);
 
-            return response()->json(['status' => 'success', 'message' => 'Verification email sent successfully'], 200);
+            return $this->respondWithToken($token);
+
         }
 
         return response()->json(['status' => 'error', 'message' => 'Unable to create user'], 200);
@@ -121,42 +120,6 @@ class RegisterController extends Controller
         return response()->json(['status' => 'error', 'message' => 'Unable to update profile'], 200);
 
     }
-
-
-
-    /**
-    * Verify email using the token from email magic link
-    *
-    */
-    public function verifyEmail(Request $request){
-        $user = User::where('auth_token', decrypt($request->get('token')))->first();
-
-        // Check if the user exists and if the token is yet to expire; one hour
-        if ($user && Carbon::parse($user->auth_token_at)->diffInHours() <= 1 ) {
-            $token = auth()->login($user);
-            if (!$token) {
-                return response()->json(['error' => 'Unauthorized'], 401);
-            }
-
-            auth()->setTTL(52560000);
-
-            $user->update([
-                'auth_token' => NULL,
-                'auth_token_at' => NULL,
-                'verified' => true,
-            ]);
-
-            return $this->respondWithToken($token);
-        }
-
-        return response()->json([
-            'status' => 'failed',
-            'message' => "AUthentication failed or link expired.",
-        ]);
-    }
-
-
-
 
 
      /**

@@ -15,8 +15,8 @@ class CreateInvestmentsTable extends Migration
     {
         Schema::create('investments', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('investment_name')
-            $table->integer('target_amount')
+            $table->string('investment_name');
+            $table->integer('target_amount');
             $table->json('duration');
             $table->json('roi_percentage');
             $table->string('status');
