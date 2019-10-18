@@ -78,8 +78,8 @@ class Home extends Component {
 
         axios.post("/api/account/register", formData).then((response) => {
             if (response.data.token !== '') {
-                ls.set('token_', response.data.token);
-                // window.location = '/dashboard';
+                ls.set('token_', response.data.access_token);
+                window.location = '/dashboard';
             } else {
                 console.log(respose);
             }
