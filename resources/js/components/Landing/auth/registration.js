@@ -429,10 +429,11 @@ class Step3 extends Component {
     term() {
         if (this.state.term == false) {
             this.setState({ term: true });
+            this.setState({ term_validate: 'custom-control-input' });
         }else{
             this.setState({ term: false });
         }
-        this.setState({ term_validate: 'custom-control-input' });
+        
     }
 
 
