@@ -35,7 +35,6 @@ class RegisterController extends Controller
                 'state' => ['string'],
                 'whatsapp_contact' => ['string'],
                 'age_range' => ['string'],
-                'country' => ['string'],
                 'bank_name' => ['string'],
                 'account_name' => ['string'],
                 'account_number' => ['string'],
@@ -94,7 +93,7 @@ class RegisterController extends Controller
             ]);
 
             $token = auth()->login($createUser);
-            auth()->setTTL(52560000);
+            //auth()->setTTL(52560000);
 
             return $this->respondWithToken($token);
 
@@ -133,7 +132,7 @@ class RegisterController extends Controller
     {
         return response()->json([
             'access_token' => $token,
-            'token_type' => 'bearer',
+            'token_type' => 'bearer'
         ]);
     }
 

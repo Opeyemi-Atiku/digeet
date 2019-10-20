@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import ls from 'local-storage';
+import $ from 'jquery';
 
 
 
@@ -10,6 +11,7 @@ class Header extends Component {
         super(props);
 
         this.state = {
+            _isLogin: ls.get('token_'),
             auth_user: '',
         }
     }
@@ -33,13 +35,13 @@ class Header extends Component {
                                     Logo
                                 </a>
                                 <div className="d-flex order-lg-2 ml-auto">
-                                    <div className="dropdown d-none d-md-flex">
-                                        <a className="nav-link icon" data-toggle="dropdown">
+                                    <div className="dropdown d-none d-md-flex show">
+                                        <a className="nav-link icon" data-toggle="dropdown" aria-expanded="true">
                                             <i className="fe fe-bell"></i>
                                             <span className="nav-unread"></span>
                                         </a>
-                                        <div className="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                            <a href="#" className="dropdown-item d-flex">
+                                        <div className="dropdown-menu dropdown-menu-right dropdown-menu-arrow show">
+                                            <a href="#" id="notification" className="dropdown-item d-flex">
                                                 <span className="avatar mr-3 align-self-center"></span>
                                                 <div>
                                                     <strong>Nathan</strong> pushed new commit: Fix page load performance issue.
@@ -47,22 +49,6 @@ class Header extends Component {
                                                 </div>
                                             </a>
                                             <div className="dropdown-divider"></div>
-                                        </div>
-                                    </div>
-                                    <div className="dropdown">
-                                        <a href="#" className="nav-link pr-0 leading-none" data-toggle="dropdown">
-                                            <span className="avatar"></span>
-                                            <span className="ml-2 d-none d-lg-block">
-                                                <span className="text-default">{this.state.auth_user.name}</span>
-                                            </span>
-                                        </a>
-                                        <div className="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                            <a className="dropdown-item" href="#">
-                                                <i className="dropdown-icon fe fe-user"></i> Profile
-                                            </a>
-                                            <a href="/logout" className="dropdown-item">
-                                                <i className="dropdown-icon fa fa-sign-out"></i> Sign Out
-                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -78,11 +64,19 @@ class Header extends Component {
                                 <div className="col-lg order-lg-first">
                                     <ul className="nav nav-tabs border-0 flex-column flex-lg-row">
                                         <li className="nav-item">
-                                            <a href="/" className="nav-link active"><i className="fe fe-home"></i> Home</a>
-                                        </li>
-                                        <li className="nav-item">
-                                            <a href="/dashboard" className="nav-link active"><i className="fa fa-dashboard"></i> Dashboard</a>
-                                        </li>
+                                            <a href="/" className="nav-link"><i className="fe fe-home"></i> Home</a>
+                                        </li>    
+                                        {this.state._isLogin != null ? <li className="nav-item">
+                                            <a href="/dashboard" className="nav-link"><i className="fa fa-dashboard"></i> Dashboard</a>
+                                        </li> : '' }  
+                                        {this.state._isLogin == null ? <li className="nav-item">
+                                            <a href="/login" className="nav-link"><i className="fa fa-sign-in"></i> Sign In</a>
+                                        </li>    : <li className="nav-item">
+                                            <a href="/logout" className="nav-link"><i className="fa fa-sign-out"></i> Sign out</a>
+                                        </li> }  
+                                        {this.state._isLogin == null ? <li className="nav-item">
+                                            <a href="/register" className="nav-link"><i className="fa fa-user-plus"></i> Register</a>
+                                        </li>    : '' }                                                           
                                     </ul>
                                 </div>
                             </div>
