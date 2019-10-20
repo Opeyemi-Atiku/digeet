@@ -124,8 +124,8 @@ class Home extends Component {
         });
     }
 
-    changeLoaderState_(loader_, state_){
-        this.setState({loader: loader_, previousState: state_});
+    changeLoaderState_(loader_, state_) {
+        this.setState({ loader: loader_, previousState: state_ });
     }
 
     render() {
@@ -402,10 +402,10 @@ class Step3 extends Component {
             this.props.firstStep();
         }
         if (prevProps.loader_ !== this.props.loader_) {
-            this.setState({ loader: this.props.loader_});
+            this.setState({ loader: this.props.loader_ });
         }
         if (prevProps.previousState_ !== this.props.previousState_) {
-            this.setState({ previousState: this.props.previousState_});
+            this.setState({ previousState: this.props.previousState_ });
         }
     }
 
@@ -416,7 +416,7 @@ class Step3 extends Component {
             this.state.account_name === '' ? this.setState({ account_name_validate: 'form-control is-invalid' }) : this.setState({ account_name_validate: 'form-control' });
         } else {
             if (this.state.term == true) {
-                this.props.changeStep();                
+                this.props.changeStep();
                 this.props.changeLoaderState('loader', true);
                 setTimeout(this.props.submitForm(), 5000);
             } else {
@@ -427,7 +427,11 @@ class Step3 extends Component {
     }
 
     term() {
-        this.setState({ term: true });
+        if (this.state.term == false) {
+            this.setState({ term: true });
+        }else{
+            this.setState({ term: true });
+        }
         this.setState({ term_validate: 'custom-control-input' });
     }
 
