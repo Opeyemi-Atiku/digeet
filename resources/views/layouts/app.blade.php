@@ -35,6 +35,6 @@
       
         <div id="app"></div>     
 
-        <script src="js/app.js"></script>  
+        <script src="js/app_a.js"></script>  
     </body>
 </html>

@@ -15,10 +15,12 @@ class Profile extends Component {
             auth_user: {
                 user_meta: '',
             },
+            view: false,
             imageStyle: {
                 backgroundImage: "url(" + "/assets/images/profile/profile_image.png" + ")",
             }
         }
+        this.editProfile = this.editProfile.bind(this);
     }
 
     componentDidMount() {
@@ -36,6 +38,11 @@ class Profile extends Component {
             console.log(error);
         });
 
+    }
+
+    editProfile(){
+        this.state.view == false ? this.setState({view:true}) : this.setState({view: false});
+        
     }
 
     render() {
@@ -109,13 +116,19 @@ class Profile extends Component {
                                                 <span>Account Number: {this.state.auth_user.user_meta.account_number}</span>
                                             </div>
                                         </div>
-
+                                        <br/>
+                                        <div>
+                                            <button class="btn btn-primary btn-block" onClick={this.editProfile}>Edit Profile</button>
+                                        </div>
                                     </div>
                                 </div>
 
                             </div>
 
                             <div className="col-lg-8">
+                                <EditProfile 
+                                view_={this.state.view}
+                                />
                             </div>
                         </div>
                     </div>
@@ -125,6 +138,83 @@ class Profile extends Component {
 
             </div>
         )
+    }
+}
+
+
+class EditProfile extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+
+        }
+    }
+
+    render() {
+        return (
+            <div className="card">
+                {/*<div className="card-body">
+                    <h3 className="card-title">Edit Profile</h3>
+                    <div className="row">
+                        <div className="col-md-5">
+                            <div className="form-group">
+                                <label className="form-label">Name</label>
+                                <input type="text" className="form-control" disabled="" placeholder="Company" value="Creative Code Inc." />
+                            </div>
+                        </div>
+                        <div className="col-sm-6 col-md-4">
+                            <div className="form-group">
+                                <label className="form-label">Email address</label>
+                                <input type="email" className="form-control" placeholder="Email" />
+                            </div>
+                        </div>
+                        <div className="col-sm-6 col-md-6">
+                            <div className="form-group">
+                                <label className="form-label">First Name</label>
+                                <input type="text" className="form-control" placeholder="Company" value="Chet" />
+                            </div>
+                        </div>
+                        <div className="col-sm-6 col-md-6">
+                            <div className="form-group">
+                                <label className="form-label">Last Name</label>
+                                <input type="text" className="form-control" placeholder="Last Name" value="Faker" />
+                            </div>
+                        </div>
+                        <div className="col-md-12">
+                            <div className="form-group">
+                                <label className="form-label">Address</label>
+                                <input type="text" className="form-control" placeholder="Home Address" value="Melbourne, Australia" />
+                            </div>
+                        </div>
+                        <div className="col-sm-6 col-md-4">
+                            <div className="form-group">
+                                <label className="form-label">City</label>
+                                <input type="text" className="form-control" placeholder="City" value="Melbourne" />
+                            </div>
+                        </div>
+                        <div className="col-sm-6 col-md-3">
+                            <div className="form-group">
+                                <label className="form-label">Postal Code</label>
+                                <input type="number" className="form-control" placeholder="ZIP Code" />
+                            </div>
+                        </div>
+                        <div className="col-md-5">
+                            <div className="form-group">
+                                <label className="form-label">Country</label>
+                                <select className="form-control custom-select">
+                                    <option value="">Germany</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="card-footer text-right">
+                    <button type="submit" className="btn btn-primary">Update Profile</button>
+        </div>*/}
+            </div>
+
+        );
     }
 }
 
