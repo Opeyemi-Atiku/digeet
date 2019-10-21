@@ -12,11 +12,11 @@ class Home extends Component {
                 width: '5%',
             },
             name: '',
-            email: '',
+            email: '', 
             password: '',
             gender: 'm',
             state: '',
-            whatsapp_number: '',
+            whatsapp_contact: '',
             age_range: '14-25',
             bank_name: '',
             account_name: '',
@@ -92,7 +92,7 @@ class Home extends Component {
         formData.append("password", input.password);
         formData.append("gender", input.gender);
         formData.append("state", input.state);
-        formData.append("whatsapp_number", input.whatsapp_number);
+        formData.append("whatsapp_contact", input.whatsapp_contact);
         formData.append("age_range", input.age_range);
         formData.append("bank_name", input.bank_name);
         formData.append("account_name", input.account_name);
@@ -282,7 +282,7 @@ class Step2 extends Component {
         this.state = {
             ...this.props.credentital,
             state_validate: 'form-control',
-            whatsapp_number_validate: 'form-control',
+            whatsapp_contact_validate: 'form-control',
             age_range_validate: 'form-control custom-select',
         };
 
@@ -300,8 +300,8 @@ class Step2 extends Component {
             case 'state':
                 this.setState({ state_validate: 'form-control' });
                 break;
-            case 'whatsapp_number':
-                this.setState({ whatsapp_number_validate: 'form-control' });
+            case 'whatsapp_contact':
+                this.setState({ whatsapp_contact_validate: 'form-control' });
                 break;
             case 'age_range':
                 this.setState({ age_range_validate: 'form-control custom-select' });
@@ -310,9 +310,9 @@ class Step2 extends Component {
     }
 
     nextForm() {
-        if (this.state.state == '' || this.state.whatsapp_number == '' || this.state.age_range == '') {
+        if (this.state.state == '' || this.state.whatsapp_contact == '' || this.state.age_range == '') {
             this.state.state === '' ? this.setState({ state_validate: 'form-control is-invalid' }) : this.setState({ state_validate: 'form-control' });
-            this.state.whatsapp_number === '' ? this.setState({ whatsapp_number_validate: 'form-control is-invalid' }) : this.setState({ whatsapp_number_validate: 'form-control' });
+            this.state.whatsapp_contact === '' ? this.setState({ whatsapp_contact_validate: 'form-control is-invalid' }) : this.setState({ whatsapp_contact_validate: 'form-control' });
             this.state.age_range === '' ? this.setState({ age_range_validate: 'form-control custom-select is-invalid' }) : this.setState({ age_range_validate: 'form-control  custom-select' });
         } else {
             this.props.nextStep();
@@ -332,7 +332,7 @@ class Step2 extends Component {
                     </div>
                     <div className="form-group">
                         <label className="form-label">Whatsapp Number</label>
-                        <input type="text" className={this.state.whatsapp_number_validate} onChange={this.onChangeChild_} value={this.state.whatsapp_number} name="whatsapp_number" placeholder="Enter whatsapp number" />
+                        <input type="text" className={this.state.whatsapp_contact_validate} onChange={this.onChangeChild_} value={this.state.whatsapp_contact} name="whatsapp_contact" placeholder="Enter whatsapp number" />
                     </div>
                     <div className="form-group">
                         <label className="form-label">Select Age Rang</label>

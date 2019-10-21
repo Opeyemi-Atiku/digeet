@@ -5,6 +5,7 @@ import Registration from './Landing/auth/registration';
 import SignIn from './Landing/auth/signin';
 import Dashboard from './Landing/dashboard';
 import Home from './Landing/home';
+import Profile from './Landing/profile';
 import ls from 'local-storage';
 
 
@@ -32,6 +33,7 @@ const App = () => (
     <GuestRoute path='/register' component={Registration} />
     <GuestRoute path='/login' component={SignIn} />
     <PrivateRoute path='/dashboard' component={Dashboard} />
+    <PrivateRoute path='/profile' component={Profile} />
     <Route path='/logout' render={(props) => (
       ls.set('token_', null), <Redirect to='/' />
     )} />

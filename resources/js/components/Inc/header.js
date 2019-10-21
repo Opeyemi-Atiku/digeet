@@ -11,8 +11,11 @@ class Header extends Component {
 
         this.state = {
             auth_user: '',
+            imageStyle: {
+                backgroundImage: "url(" + "/assets/images/profile/profile_image.png" + ")",
+            }
         }
-    }
+    } 
 
     componentDidUpdate(prevProps) {
         if (prevProps.auth_user !== this.props.auth_user) {
@@ -33,12 +36,12 @@ class Header extends Component {
                                     Logo
                                 </a>
                                 <div className="d-flex order-lg-2 ml-auto">
-                                    <div className="dropdown d-none d-md-flex">
-                                        <a className="nav-link icon" data-toggle="dropdown">
+                                    <div className="dropdown d-none d-md-flex show">
+                                        <a className="nav-link icon" data-toggle="dropdown" aria-expanded="true">
                                             <i className="fe fe-bell"></i>
                                             <span className="nav-unread"></span>
                                         </a>
-                                        <div className="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                        <div className="dropdown-menu dropdown-menu-right dropdown-menu-arrow show">
                                             <a href="#" className="dropdown-item d-flex">
                                                 <span className="avatar mr-3 align-self-center"></span>
                                                 <div>
@@ -51,13 +54,13 @@ class Header extends Component {
                                     </div>
                                     <div className="dropdown">
                                         <a href="#" className="nav-link pr-0 leading-none" data-toggle="dropdown">
-                                            <span className="avatar"></span>
+                                            <span className="avatar" style={this.state.imageStyle}></span>
                                             <span className="ml-2 d-none d-lg-block">
                                                 <span className="text-default">{this.state.auth_user.name}</span>
                                             </span>
                                         </a>
                                         <div className="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                            <a className="dropdown-item" href="#">
+                                            <a className="dropdown-item" href="/profile">
                                                 <i className="dropdown-icon fe fe-user"></i> Profile
                                             </a>
                                             <a href="/logout" className="dropdown-item">

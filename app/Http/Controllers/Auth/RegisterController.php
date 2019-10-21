@@ -49,7 +49,7 @@ class RegisterController extends Controller
      * @return \App\User
      */
     public function create(Request $request)
-    {   
+    {    
         $validator = $this->validator($request->all());
 
         if($validator->fails()){

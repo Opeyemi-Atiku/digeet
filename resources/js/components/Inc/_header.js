@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ls from 'local-storage';
-import $ from 'jquery';
 
 
 
@@ -35,12 +34,12 @@ class Header extends Component {
                                     Logo
                                 </a>
                                 <div className="d-flex order-lg-2 ml-auto">
-                                    <div className="dropdown d-none d-md-flex show">
-                                        <a className="nav-link icon" data-toggle="dropdown" aria-expanded="true">
+                                    <div className="dropdown d-none d-md-flex">
+                                        <a className="nav-link icon" data-toggle="dropdown">
                                             <i className="fe fe-bell"></i>
                                             <span className="nav-unread"></span>
                                         </a>
-                                        <div className="dropdown-menu dropdown-menu-right dropdown-menu-arrow show">
+                                        <div className="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
                                             <a href="#" id="notification" className="dropdown-item d-flex">
                                                 <span className="avatar mr-3 align-self-center"></span>
                                                 <div>

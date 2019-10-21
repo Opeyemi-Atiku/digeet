@@ -15,6 +15,22 @@ use Carbon\Carbon;
 
 class UserController extends Controller
 {
+
+	/**
+	* User credential  
+	*/
+	public function userCredential(){
+
+		$auth_user = auth('api')->user();
+		$auth_user_ = auth('api')->user()->userMeta;
+
+		foreach($auth_user as $key => $value){
+			$auth_user_->$key = $value; 
+		}
+
+		return response()->json(['auth_user' => $auth_user ], 200);
+		
+	}
    
 	/**
     * Send verification email
