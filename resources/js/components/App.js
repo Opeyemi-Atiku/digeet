@@ -7,6 +7,8 @@ import Dashboard from './Landing/dashboard';
 import Home from './Landing/home';
 import ls from 'local-storage';
 
+
+
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route {...rest} render={(props) => (
     ls.get('token_') != null
