@@ -55,7 +55,7 @@ return [
             'strict' => true,
             'engine' => null,
         ],
-        /*'pgsql' => [
+        'pgsql' => [
             'driver' => 'pgsql',
             'host' => parse_url(getenv("DATABASE_URL"))['host'],
             'port' => env('DB_PORT', '5432'),
@@ -67,10 +67,10 @@ return [
             'prefix_indexes' => true,
             'schema' => 'public',
             'sslmode' => 'prefer',
-          ],*/
+          ],
       
 
-        'pgsql' => [
+        /*'pgsql' => [
             'driver' => 'pgsql',
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '5432'),
@@ -82,7 +82,7 @@ return [
             'prefix_indexes' => true,
             'schema' => 'public',
             'sslmode' => 'prefer',
-        ],
+        ],*/
 
         'sqlsrv' => [
             'driver' => 'sqlsrv',
