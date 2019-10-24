@@ -39,7 +39,7 @@ class InvestmentController extends Controller
         );
 
         if($addInvestment){
-        	return response()->json(['status' => 'successfule', 'message' => 'Investment added successfully'], 200);
+        	return response()->json(['status' => 'successful', 'message' => 'Investment added successfully'], 200);
         }
 
         return response()->json(['status' => 'error', 'message' => 'unable to add Investment'], 200);

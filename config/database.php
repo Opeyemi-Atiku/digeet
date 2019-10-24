@@ -55,34 +55,34 @@ return [
             'strict' => true,
             'engine' => null,
         ],
-        'pgsql' => [
-            'driver' => 'pgsql',
-            'host' => parse_url(getenv("DATABASE_URL"))['host'],
-            'port' => env('DB_PORT', '5432'),
-            'database' => substr(parse_url(getenv("DATABASE_URL"))['path'],1),
-            'username' => parse_url(getenv("DATABASE_URL"))['user'],
-            'password' => parse_url(getenv("DATABASE_URL"))['pass'],
-            'charset' => 'utf8',
-            'prefix' => '',
-            'prefix_indexes' => true,
-            'schema' => 'public',
-            'sslmode' => 'prefer', 
-          ],
-      
+        // 'pgsql' => [
+        //     'driver' => 'pgsql',
+        //     'host' => parse_url(getenv("DATABASE_URL"))['host'],
+        //     'port' => env('DB_PORT', '5432'),
+        //     'database' => substr(parse_url(getenv("DATABASE_URL"))['path'],1),
+        //     'username' => parse_url(getenv("DATABASE_URL"))['user'],
+        //     'password' => parse_url(getenv("DATABASE_URL"))['pass'],
+        //     'charset' => 'utf8',
+        //     'prefix' => '',
+        //     'prefix_indexes' => true,
+        //     'schema' => 'public',
+        //     'sslmode' => 'prefer',
+        //   ],
 
-        /*'pgsql' => [
+
+        'pgsql' => [
             'driver' => 'pgsql',
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '5432'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'database' => env('DB_DATABASE', 'postgres'),
+            'username' => env('DB_USERNAME', 'postgres'),
+            'password' => env('DB_PASSWORD', '123456'),
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
             'schema' => 'public',
             'sslmode' => 'prefer',
-        ],*/
+        ],
 
         'sqlsrv' => [
             'driver' => 'sqlsrv',

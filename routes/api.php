@@ -17,9 +17,9 @@ use Illuminate\Http\Request;
 /** Account, Auth Module Route */
 $router->group(['prefix' => 'account'], function ($router) {
     $router->post('register', 'Auth\RegisterController@create');
-    
 
-    $router->group(['middleware' => 'jwt.auth'], function ($router){ 
+
+    $router->group(['middleware' => 'jwt.auth'], function ($router){
         $router->post('user', 'UserController@userCredential');
     	$router->post('update-info', 'Auth\RegisterController@updateInfo');
     	$router->post('upgrade-plan', 'UserController@upgradePlan');
