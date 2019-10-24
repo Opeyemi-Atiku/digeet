@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Identity;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
@@ -17,7 +18,7 @@ class UserController extends Controller
 {
 
 	/**
-	* User credential  
+	* User credential
 	*/
 	public function userCredential(){
 
@@ -25,13 +26,13 @@ class UserController extends Controller
 		$auth_user_ = auth('api')->user()->userMeta;
 
 		foreach($auth_user as $key => $value){
-			$auth_user_->$key = $value; 
+			$auth_user_->$key = $value;
 		}
 
 		return response()->json(['auth_user' => $auth_user ], 200);
-		
+
 	}
-   
+
 	/**
     * Send verification email
     *
@@ -69,7 +70,7 @@ class UserController extends Controller
         }
 
         return response()->json(['status' => 'error', 'message' => 'Unable to send verification email'], 200);
-        
+
 	}
 
 
@@ -82,7 +83,7 @@ class UserController extends Controller
 
         // Check if the user exists and if the token is yet to expire; one hour
         if ($user && Carbon::parse($user->auth_token_at)->diffInHours() <= 1 ) {
-          
+
             $user->update([
                 'auth_token' => NULL,
                 'auth_token_at' => NULL,
@@ -98,7 +99,7 @@ class UserController extends Controller
         ]);
     }
 
-	
+
 
     /**
     * Upgrade user plan
@@ -117,7 +118,7 @@ class UserController extends Controller
 	    		'referral_status' => 'successful'
     		]);
     	}
-    	
+
 
     	if($upgradePlan){
     		return response()->json(['status' => 'success', 'message' => 'Plan upgraded successfully'], 200);
@@ -176,6 +177,60 @@ class UserController extends Controller
 
     		return response()->json(['status' => 'error', 'message'=>'Unable to update BVN verification status'], 200);
     	}
+
+    }
+
+    public function uploadIdentity(Request $request) {
+
+        $email = User::where('id', $request->user_id)->first()['name'];
+
+
+        $file = $request->front->getClientOriginalName();
+
+        $filename_without_extension = pathinfo($file, PATHINFO_FILENAME);
+
+        $extension = $request->front->getClientOriginalExtension();
+
+        $front = $filename_without_extension.'_'.time().'.'.$extension;
+
+        $request->front->move('identities/'.$email.'/', $front);
+
+
+        $file = $request->back->getClientOriginalName();
+
+        $filename_without_extension = pathinfo($file, PATHINFO_FILENAME);
+
+        $extension = $request->back->getClientOriginalExtension();
+
+        $back = $filename_without_extension.'_'.time().'.'.$extension;
+
+        $request->back->move('identities/'.$email.'/', $back);
+
+
+        $file = $request->full->getClientOriginalName();
+
+        $filename_without_extension = pathinfo($file, PATHINFO_FILENAME);
+
+        $extension = $request->full->getClientOriginalExtension();
+
+        $full = $filename_without_extension.'_'.time().'.'.$extension;
+
+        $request->full->move('identities/'.$email.'/', $full);
+
+
+
+        $identity = Identity::create([
+            'user_id' => $request->user_id,
+            'front' => 'identities/'.$email.'/'.$front,
+            'back' => 'identities/'.$email.'/'.$back,
+            'with_user' => 'identities/'.$email.'/'.$full,
+            'verified' => false
+        ]);
+
+        if($identity) {
+            return response("Identity successfully uploaded", 200);
+        }
+
 
     }
 

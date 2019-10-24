@@ -12,19 +12,20 @@ use Illuminate\Support\Facades\Mail;
 use Tymon\JWTAuth\Facades\JWTAuth;
 use Tymon\JWTAuthExceptions\JWTException;
 use App\Mail\Users\EmailVerification;
+use App\Notification;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 
 class RegisterController extends Controller
 {
-   
+
     /**
      * Get a validator for an incoming registration request.
      *
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
-     */ 
+     */
     protected function validator(array $data)
     {
             return Validator::make($data, [
@@ -38,10 +39,12 @@ class RegisterController extends Controller
                 'bank_name' => ['string'],
                 'account_name' => ['string'],
                 'account_number' => ['string'],
-            ]); 
+            ]);
     }
 
-    
+
+
+
     /**
      * Create a new user instance after a valid registration.
      *
@@ -49,13 +52,13 @@ class RegisterController extends Controller
      * @return \App\User
      */
     public function create(Request $request)
-    {    
+    {
         $validator = $this->validator($request->all());
 
         if($validator->fails()){
             return response()->json(['status' => 'error', 'message' => 'Validation failed', 'validation_error' => $validator->errors()], 200);
         }
-        //Check if the user about to register was referred 
+        //Check if the user about to register was referred
         if($request->get('referral_token') != null){
 
             $referral = User::where('referral_auth', $request->get('referral_token'))->first();
@@ -78,7 +81,13 @@ class RegisterController extends Controller
             'referred_by' => ($request->get('referral_token') == null || (isset($referred_by) && $referred_by == null)) ? NULL : $referred_by
         ]);
 
-        if($createUser){
+        $createNotification = Notification::create([
+            'user_id' => $createUser->id,
+            'notification' => "Registeration successful, welcome to Digeet",
+            'type' => 'registeration'
+        ]);
+
+        if($createUser && $createNotification){
 
             UserMeta::create([
                 'user_id' => $createUser->id,
@@ -105,11 +114,11 @@ class RegisterController extends Controller
 
 
     /**
-     * update user info 
-     * 
+     * update user info
+     *
      */
     public function updateInfo(Request $request){
-        
+
         $updateInfo = UserMeta::where('user_id', Auth::user()->id)->update($request->all());
 
         if($updateInfo){
